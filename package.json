@@ -1,7 +1,8 @@
 {
   "type": "module",
   "scripts": {
-    "lint": "npx prettier . --write && npx eslint . --fix"
+    "lint": "npx prettier . --write && npx eslint . --fix",
+    "start": "node index.ts"
   },
   "dependencies": {
     "express": "^5.2.0"

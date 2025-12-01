@@ -1,9 +1,11 @@
 import express from 'express'
+import { companiesRouter } from './companies/companiesRouter.ts'
 const app = express()
 const port = 8080
 
-// Define a route for GET requests to the root URL
-app.get('/', (req, res) => {
+app.use(companiesRouter)
+
+app.get('/', (_, res) => {
   res.send('Hello World from Express!')
 })
 

@@ -1,4 +1,4 @@
-import { EmployeeData } from './EmployeeData'
+import type { EmployeeData } from './EmployeeData.ts'
 
 export interface CompanyData {
   id: number
