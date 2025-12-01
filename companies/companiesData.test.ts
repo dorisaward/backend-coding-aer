@@ -34,6 +34,8 @@ describe('companiesData', () => {
 
   it('returns empty array if data path does not exist', () => {
     // Given
+    const errorSpy = jest.spyOn(console, 'error').mockImplementation()
+
     mockFs.existsSync.mockReturnValue(false)
 
     // When
@@ -41,6 +43,7 @@ describe('companiesData', () => {
 
     // Then
     expect(result).toEqual([])
+    errorSpy.mockRestore()
   })
 
   it('logs warning for invalid JSON', () => {
