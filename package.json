@@ -1,18 +1,25 @@
 {
   "type": "module",
   "scripts": {
-    "lint": "npx prettier . --write && npx eslint . --fix",
-    "start": "node index.ts"
+    "lint": "npx prettier . --write && npx eslint . --fix --ignore-pattern '*config.*'",
+    "start": "node index.ts",
+    "test": "jest"
   },
   "dependencies": {
     "express": "^5.2.0",
     "zod": "^4.1.13"
   },
   "devDependencies": {
+    "@babel/core": "^7.28.5",
+    "@babel/preset-env": "^7.28.5",
+    "@babel/preset-typescript": "^7.28.5",
     "@eslint/js": "^9.39.1",
     "@types/express": "^5.0.5",
+    "@types/jest": "^30.0.0",
+    "babel-jest": "^30.2.0",
     "eslint": "^9.39.1",
     "eslint-config-prettier": "^10.1.8",
+    "jest": "^30.2.0",
     "prettier": "3.7.3",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.48.0"
